@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>Soal 1</title>
+    <title>Prak 1</title>
 </head>
 <body>
     <form action="" method="post">
