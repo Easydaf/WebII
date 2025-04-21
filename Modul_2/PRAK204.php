@@ -8,7 +8,7 @@
 <body>
     <form method="post">
         <label for="nilai">Nilai: </label>
-        <input type="number" name="nilai"><br>
+        <input type="number" name="nilai" value="<?= isset($_POST['nilai']) ? htmlspecialchars($_POST['nilai']) : '' ?>"><br>
         <input type="submit" name="submit" value="Konversi">
     </form>
 </body>

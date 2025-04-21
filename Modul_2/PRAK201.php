@@ -18,7 +18,7 @@
         $name3 = $_POST['name3'];
 
         $names = array($name1, $name2, $name3);
-        ksort($names);
+        sort($names);
 
         echo "<h2>Nama yang sudah diurutkan:</h2>";
         foreach ($names as $name) {

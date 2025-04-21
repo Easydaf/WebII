@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soal 3</title>
@@ -7,24 +8,24 @@
 <body>
     <form method="post">
         <label for="nilai">Nilai: </label>
-        <input type="number" name="suhu" id="suhu"><br>
+        <input type="number" name="suhu" value="<?= isset($_POST['suhu']) ? htmlspecialchars($_POST['suhu']) : '' ?>"><br>
         <span>dari: </span><br>
-        <input type="radio" name="suhuAwal" value="celsius">
+        <input type="radio" name="suhuAwal" <?php if (isset($_POST['suhuAwal']) && $_POST['suhuAwal'] === 'celsius') echo 'checked' ?> value="celsius">
         <label for="celsius">Celsius</label><br>
-        <input type="radio" name="suhuAwal" value="fahrenheit">
+        <input type="radio" name="suhuAwal" <?php if (isset($_POST['suhuAwal']) && $_POST['suhuAwal'] === 'fahrenheit') echo 'checked' ?> value="fahrenheit">
         <label for="fahrenheit">Fahrenheit</label><br>
-        <input type="radio" name="suhuAwal" value="reamur">
+        <input type="radio" name="suhuAwal" <?php if (isset($_POST['suhuAwal']) && $_POST['suhuAwal'] === 'reamur') echo 'checked' ?> value="reamur">
         <label for="reamur">Reamur</label><br>
-        <input type="radio" name="suhuAwal" value="kelvin">
+        <input type="radio" name="suhuAwal" <?php if (isset($_POST['suhuAwal']) && $_POST['suhuAwal'] === 'kelvin') echo 'checked' ?> value="kelvin">
         <label for="kelvin">Kelvin</label><br>
         <span>ke: </span><br>
-        <input type="radio" name="konversiSuhu" value="celsius">
+        <input type="radio" name="konversiSuhu" <?php if (isset($_POST['suhuAwal']) && $_POST['suhuAwal'] === 'celsius') echo 'checked' ?> value="celsius">
         <label for="toCelsius">Celsius</label><br>
-        <input type="radio" name="konversiSuhu" value="fahrenheit">
+        <input type="radio" name="konversiSuhu" <?php if (isset($_POST['suhuAwal']) && $_POST['suhuAwal'] === 'fahrenheit') echo 'checked' ?> value="fahrenheit">
         <label for="toFahrenheit">Fahrenheit</label><br>
-        <input type="radio" name="konversiSuhu" value="reamur">
+        <input type="radio" name="konversiSuhu" <?php if (isset($_POST['suhuAwal']) && $_POST['suhuAwal'] === 'reamur') echo 'checked' ?> value="reamur">
         <label for="toReamur">Reamur</label><br>
-        <input type="radio" name="konversiSuhu" value="kelvin">
+        <input type="radio" name="konversiSuhu" <?php if (isset($_POST['suhuAwal']) && $_POST['suhuAwal'] === 'kelvin') echo 'checked' ?> value="kelvin">
         <label for="toKelvin">Kelvin</label><br>
         <input type="submit" name="submit" value="Konversi">
     </form>
