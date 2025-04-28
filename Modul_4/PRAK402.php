@@ -35,7 +35,6 @@
         ],
     ];
 
-    // 2. Hitung nilai akhir dan huruf
     foreach ($mahasiswa as $key => $data) {
         $nilaiAkhir = (0.4 * $data["uts"]) + (0.6 * $data["uas"]);
         $mahasiswa[$key]["nilai_akhir"] = $nilaiAkhir;
