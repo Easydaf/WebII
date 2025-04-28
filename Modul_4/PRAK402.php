@@ -55,7 +55,6 @@
     }
     ?>
 
-    <!-- 3. Tampilkan tabel -->
     <table border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>Nama</th>

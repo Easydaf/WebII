@@ -28,7 +28,6 @@ $data = [
     ]
 ];
 
-// logika menentukan total SKS dan keterangan
 foreach ($data as $key => $value) {
     $total_sks = 0;
     foreach ($value['mata_kuliah'] as $mk) {
@@ -90,18 +89,15 @@ foreach ($data as $key => $value) {
         echo "<td rowspan='$rowspan'>{$no}</td>";
         echo "<td rowspan='$rowspan'>{$mhs['nama']}</td>";
 
-        // Ambil data mata kuliah pertama
         $first_mk = array_shift($mhs['mata_kuliah']);
         echo "<td>{$first_mk['nama_mk']}</td>";
         echo "<td>{$first_mk['sks']}</td>";
 
-        // Cetak total SKS dan keterangan hanya di baris pertama
         echo "<td rowspan='$rowspan'>{$mhs['total_sks']}</td>";
         $class = ($mhs['keterangan'] == 'Tidak Revisi') ? 'hijau' : 'merah';
         echo "<td rowspan='$rowspan' class='$class'>{$mhs['keterangan']}</td>";
         echo "</tr>";
 
-        // Cetak sisa mata kuliah
         foreach ($mhs['mata_kuliah'] as $mk) {
             echo "<tr>";
             echo "<td>{$mk['nama_mk']}</td>";
