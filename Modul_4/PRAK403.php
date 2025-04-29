@@ -69,7 +69,7 @@ foreach ($data as $key => $value) {
 </head>
 <body>
 
-<h3>Cetak hasil output seperti berikut:</h3>
+<p>Cetak hasil output seperti berikut:</p>
 
 <table>
     <tr>
