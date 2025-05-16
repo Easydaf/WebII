@@ -16,9 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Tambah Member</title>
 </head>
+
 <body>
     <h1>Tambah Data Member</h1>
     <form method="post">
@@ -34,4 +36,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit">Simpan</button>
     </form>
 </body>
+
 </html>
