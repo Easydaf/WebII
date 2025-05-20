@@ -16,7 +16,9 @@ class Authfilter implements FilterInterface
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
-        // Do something here
+        // Do something after the request
+        // For example, you can log the response or modify it
+        // But in this case, we don't need to do anything here
     }
 }
 ?>

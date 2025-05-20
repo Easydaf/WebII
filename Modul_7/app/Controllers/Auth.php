@@ -8,7 +8,7 @@ class Auth extends BaseController
 {
     public function login()
     {
-        return view('login'); // ini harus cocok dengan nama file view login.php
+        return view('login');
     }
 
     public function doLogin()
