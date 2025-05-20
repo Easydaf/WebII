@@ -7,7 +7,6 @@
 </head>
 
 <body class="bg-light p-4">
-
     <div class="container">
         <div class="card shadow">
             <div class="card-header bg-success text-white">
@@ -30,7 +29,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
-                        <input type="number" name="tahun_terbit" class="form-control" value="<?= esc($buku['tahun_terbit']) ?>" required>
+                        <input type="number" name="tahun_terbit" class="form-control <?= isset($validation) && $validation->hasError('tahun_terbit') ? 'is-invalid' : '' ?>" value="<?= old('tahun_terbit', $buku['tahun_terbit'] ?? '') ?>" required>
+                        <?php if (isset($validation) && $validation->hasError('tahun_terbit')) : ?>
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('tahun_terbit') ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <button type="submit" class="btn btn-success">Perbarui</button>
                     <a href="/buku" class="btn btn-secondary ms-2">Kembali</a>
@@ -38,7 +42,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

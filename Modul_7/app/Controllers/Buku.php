@@ -31,7 +31,7 @@ class Buku extends Controller
         $validation = \Config\Services::validation();
 
         $rules = [
-            'tahun_terbit' => 'required|integer|greater_than_equal_to[1800]|less_than_equal_to[2023]'
+            'tahun_terbit' => 'required|integer|greater_than_equal_to[1900]|less_than_equal_to[2023]'
         ];
 
         if (!$this->validate($rules)) {
@@ -40,7 +40,7 @@ class Buku extends Controller
 
         $data = [
             'judul' => $this->request->getPost('judul'),
-            'pengarang' => $this->request->getPost('penulis'),
+            'penulis' => $this->request->getPost('penulis'),
             'penerbit' => $this->request->getPost('penerbit'),
             'tahun_terbit' => $this->request->getPost('tahun_terbit'),
         ];
@@ -58,7 +58,7 @@ class Buku extends Controller
     public function update($id)
     {
         $rules = [
-            'tahun_terbit' => 'required|integer|greater_than[1901]|less_than[2024]'
+            'tahun_terbit' => 'required|integer|greater_than[1900]|less_than[2024]'
         ];
         if (!$this->validate($rules)) {
             return view('buku/edit', [

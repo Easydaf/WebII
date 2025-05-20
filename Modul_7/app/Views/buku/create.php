@@ -29,7 +29,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
-                        <input type="number" name="tahun_terbit" class="form-control" required>
+                        <input type="number" name="tahun_terbit" class="form-control <?= isset($validation) && $validation->hasError('tahun_terbit') ? 'is-invalid' : '' ?>" value="<?= old('tahun_terbit', $buku['tahun_terbit'] ?? '') ?>" required>
+                        <?php if (isset($validation) && $validation->hasError('tahun_terbit')) : ?>
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('tahun_terbit') ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     <a href="/buku" class="btn btn-secondary ms-2">Kembali</a>
